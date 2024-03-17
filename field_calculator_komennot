@@ -1,0 +1,23 @@
+# Koodi vaatii valmistelevaa työtä Arcgis Prossa. Eri kriteerien avulla on ennen tätä laskettu sarakkeisiin sopiiko kyseinen kohde haluttuun toimintaan.
+# Sopivuus on määritelty seuraavasti: 1=parantunut soveltuminen, 2=soveltuu, 3=heikentynyt soveltuminen, 4=ei sovellu
+# Koodi hakee tulossarakkeeseen sen, soveltuuko kyseinen kohde toimintaan.
+
+# Koodi viedään calculate field-toimintoon.
+
+# Ensimmäisessä laatikossa kutsutaan metodia. Parametreiksi haetaan kaikki ne sarakkeet, joita halutaan käsitellä.
+hae_oikea_koodi(!ArvGeoKoodi!,!ValArvMaiKoodi!)
+
+# Määritellään metodi
+def hae_oikea_koodi(arvgeo,valarvmai):
+# Asetetaan parametrin arvot listaan
+ koodit = list((arvgeo,valarvmai))
+# Käydään läpi arvot ja palautetaan haluttu arvo alla olevan mukaisesti. Metodi palauttaa aina suurimman arvon, mikäli jokin parametri on 3 tai 4.
+# Jos yksikään parametri ei ole arvoltaan 3 tai 4 kysyy metodi löytyykö arvoa 1. Mikäli arvoa 1 ei löydy palauttaa metodi arvon 2.
+ if 4 in koodit:
+     return 4
+ elif 3 in koodit:
+     return 3
+ elif 1 in koodit:
+     return 1
+ else:
+     return 2
