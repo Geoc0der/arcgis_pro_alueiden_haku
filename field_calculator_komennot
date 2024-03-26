@@ -39,9 +39,9 @@ def hae_oikea_koodi(arvgeo,valarvmai):
  elif 3 in koodit:
      return 3
 # COUNT-FUNKTION TOIMINTA PITÄÄ TARKISTAA
- elif koodit.count(1) = 3:
+ elif koodit.count(1) == 3:
      return 6
- elif koodit.count(1) = 2:
+ elif koodit.count(1) == 2:
      return 5
  elif 1 in koodit:
      return 1
