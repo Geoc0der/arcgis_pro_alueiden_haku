@@ -21,3 +21,5 @@ def hae_oikea_koodi(arvgeo,valarvmai):
      return 1
  else:
      return 2
+
+# Alla olevassa koodissa hyvät alueet on vielä kategorisoitu 
