@@ -22,4 +22,28 @@ def hae_oikea_koodi(arvgeo,valarvmai):
  else:
      return 2
 
-# Alla olevassa koodissa hyvät alueet on vielä kategorisoitu 
+# Alla olevassa koodissa hyvät alueet on vielä kategorisoitu siten, että jos ruutu on saanut kaksi koodia 1 se saa arvokseen 10 ja jos kolme koodia 1 se saa arvokseen 11
+# ALLA OLEVA KOODI ON ENSIMMÄINEN VERSIO JA SITÄ PITÄÄ TESTATA
+
+# Ensimmäisessä laatikossa kutsutaan metodia. Parametreiksi haetaan kaikki ne sarakkeet, joita halutaan käsitellä.
+hae_oikea_koodi(!ArvGeoKoodi!,!ValArvMaiKoodi!)
+
+# Määritellään metodi
+def hae_oikea_koodi(arvgeo,valarvmai):
+# Asetetaan parametrin arvot listaan
+ koodit = list((arvgeo,valarvmai))
+# Käydään läpi arvot ja palautetaan haluttu arvo alla olevan mukaisesti. Metodi palauttaa aina suurimman arvon, mikäli jokin parametri on 3 tai 4.
+# Jos yksikään parametri ei ole arvoltaan 3 tai 4 kysyy metodi löytyykö arvoa 1. Mikäli arvoa 1 ei löydy palauttaa metodi arvon 2.
+ if 4 in koodit:
+     return 4
+ elif 3 in koodit:
+     return 3
+# COUNT-FUNKTION TOIMINTA PITÄÄ TARKISTAA
+ elif koodit.count(1) = 2:
+     return 10
+ elif koodit.count(1) = 3:
+     return 11
+ elif 1 in koodit:
+     return 1
+ else:
+     return 2
